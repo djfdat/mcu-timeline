@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+
+
+<script>
+    import { movies } from "../stores/movies_store.js";
+    console.log($movies)
+</script>
+
+<h1>List of Marvel Movies</h1>
+
+{#each movies as movie}
+    <p>movie.title</p>
+    <p>movie.date</p>
+{/each}
